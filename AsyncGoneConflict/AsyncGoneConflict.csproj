@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<AzureFunctionsVersion>V4</AzureFunctionsVersion>
+		<OutputType>Exe</OutputType>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+		<PackageReference Include="Microsoft.Azure.Functions.Worker" />
+		<PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore" />
+		<PackageReference Include="Microsoft.Azure.Functions.Worker.Sdk" />
+
+
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+
+		<PackageReference Include="Scalar.AspNetCore" />
+		<PackageReference Include="Scalar.AspNetCore.Microsoft" />
+
+		<PackageReference Include="Microsoft.Identity.Web" />
+		<PackageReference Include="Polly" />
+
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="appsettings.Development.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="appsettings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>
